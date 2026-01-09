@@ -1,0 +1,1 @@
+wsl npx lint-staged
