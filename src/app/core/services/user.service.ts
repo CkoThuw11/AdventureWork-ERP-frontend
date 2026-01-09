@@ -21,7 +21,7 @@ export class UserService {
   /**
    * Get all users
    */
-  getUsers(skip: number = 0, limit: number = 100): Observable<UserDto[]> {
+  getUsers(skip = 0, limit = 100): Observable<UserDto[]> {
     return this.http.get<UserDto[]>(this.baseUrl, {
       params: { skip: skip.toString(), limit: limit.toString() }
     });

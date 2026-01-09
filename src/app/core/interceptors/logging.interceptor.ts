@@ -14,7 +14,7 @@ export const loggingInterceptor: HttpInterceptorFn = (req, next) => {
   
   return next(req).pipe(
     tap({
-      next: (event) => {
+      next: () => {
         const elapsed = Date.now() - started;
         console.log(`[HTTP] ${req.method} ${req.url} completed in ${elapsed}ms`);
       },
